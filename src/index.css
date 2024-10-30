@@ -1,68 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --hover-clr: #e6e4e4;
+  --white-clr: #fff;
+  --black-clr: black;
+  --bar-height: 3px;
+  --bar-width: 30px;
+  --bar-gap: 10px;
+  --timing-duration: .3s;
+  --timing-function: ease;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html{
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+body{
+  font-size: 1.2rem;
+}
+
+.main {
   min-height: 100vh;
 }
 
+h1, h2, h3, p {
+  margin: 0;
+}
+
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.986rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+h2 {
+  font-size: 2.488rem;
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+
+p{
+  font-size: 1.44rem;
+}
+
+/* margin */
+.mb-20{
+  margin-bottom: 20px;
+}
+
+.mh-center {
+  margin: 0 auto;
+}
+
+.pl-10{
+  padding-left: 10px;
+}
+
+.pr-10{
+  padding-right: 10px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.plr-10{
+  padding: 10px 0;
+}
+
+/* menu toggle */
+.menu-toggle{
+  position: relative;
+  height: calc(var(--bar-height) * 3 + var(--bar-gap) * 3 + 4px);
+  width: calc(var(--bar-width) + 15px);
+  border: 1px solid var(--white-clr);
+  border-radius: 5px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition-property: border-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.menu-toggle:hover{
+  border-color: var(--black-clr);
+}
+
+.bar, .bar::before, .bar::after{
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--black-clr);
+  left: 8px;
+  top: var(--bar-gap);
+  transition-property: opacity, top, transform;
+}
+
+.bar::before, .bar::after{
+  content: "";
+  left: 0;
+}
+
+.bar::before{
+  top: calc(var(--bar-gap));
+}
+
+.bar::after{
+  top: calc(var(--bar-gap) + 10px);
+}
+/* When menu is active (X state) */
+.menu-toggle.close .bar {
+  transform: rotate(45deg); 
+  top: calc(var(--bar-gap) + 10px)
+}
+
+.menu-toggle.close .bar::before {
+  transform: rotate(-90deg); 
+  top: 0; 
+  opacity: 0;
+}
+
+.menu-toggle.close .bar::after {
+  transform: rotate(-95deg); 
+  top: 0; 
+}
+
+/* animation */
+.bar, .bar::before, .bar::after,
+.menu-toggle{
+  transition-duration: var(--timing-duration);
+  transition-timing-function: var(--timing-function);
 }
