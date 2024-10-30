@@ -69,6 +69,18 @@ p{
   padding: 10px 0;
 }
 
+/* list */
+.list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* link */
+.link{
+  text-decoration: none;
+}
+
 /* menu toggle */
 .menu-toggle{
   position: relative;
@@ -123,6 +135,22 @@ p{
 .menu-toggle.close .bar::after {
   transform: rotate(-95deg); 
   top: 0; 
+}
+
+@media screen and (min-width: 768px){
+  .menu-toggle{
+    display: none;
+  }
+}
+
+/* logo */
+.logo-container{
+  width: 120px;
+  display: flex;
+}
+
+.logo{
+  width: 100%;
 }
 
 /* animation */
