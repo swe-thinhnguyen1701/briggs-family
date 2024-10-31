@@ -1,22 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-    const [isClose, setIsClose] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setIsOpen(false);  // Close the menu if width reaches 768px
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        handleResize();  // Run the function on initial load in case the window is already resized
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const handleMenuClick = (e) => {
+        // e.preventDefault();
+        console.log(e.target.closest(".menu-item"));
+        if(e.target.closest(".menu-item"))
+            setIsOpen(!isOpen);
+    }
 
     return (
         <nav className="nav">
-            <div className="nav-container">
+            <div className="nav-container m-center">
                 <div className="nav-left">
-                    <Link to="/" className="link logo-container">
+                    <Link to="/" className="link logo-container" onClick={() => setIsOpen(false)}>
                         <img src="./src/assets/birgg-logo.webp" alt="Briggs family logo" className="logo"/>
                     </Link>
                 </div>
-                <div className="navright">
-                    <div className={isClose ? "menu-toggle close" : "menu-toggle"} onClick={() => setIsClose(!isClose)}>
+                <div className="nav-right">
+                    <div className={isOpen ? "menu-toggle open" : "menu-toggle"} onClick={() => setIsOpen(!isOpen)}>
                         <span className="bar"></span>
                     </div>
-                    <ul className="list menu">
+                    <ul className={isOpen ? "list menu open" : "list menu"} onClick={(e) => handleMenuClick(e)}>
                         <li className="menu-item">
                             <Link to="/" className="link">Home</Link>
                         </li>
