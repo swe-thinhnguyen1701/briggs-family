@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const currentPage = useLocation().pathname;
 
     useEffect(() => {
         const handleResize = () => {
@@ -38,7 +39,7 @@ function NavBar() {
                     </div>
                     <ul className={isOpen ? "list menu open" : "list menu"} onClick={(e) => handleMenuClick(e)}>
                         <li className="menu-item">
-                            <Link to="/" className="link">Home</Link>
+                            <Link to="/" className={currentPage === "/" ? "link highlight" : "link"}>Home</Link>
                         </li>
                         <li className="menu-item">
                             <Link to="/" className="link">Home</Link>
