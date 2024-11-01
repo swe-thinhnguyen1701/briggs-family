@@ -57,6 +57,14 @@ function Footer() {
                         </a>
                     </div>
                 </li>
+                <li className="list-item">
+                    <h4 className="footer-title">Quick Links</h4>
+                    <div className="footer-info">
+                        <Link to="/career" className="link">Career</Link>
+                        <a href="/private-policy" className="link">Private Policy</a>
+                        <Link to="/faq" className="link">FAQ</Link>
+                    </div>
+                </li>
             </ul>
             <div className="copyright">
                 <span>Copyright © 2024 Briggs Family. All rights reversed.</span>

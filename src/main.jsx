@@ -6,6 +6,7 @@ import './index.css';
 
 import HomePage from './pages/HomePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
+import PolicyPage from './pages/PolicyPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: '/private-policy',
+        element: <PolicyPage />,
       },
     ],
   },
