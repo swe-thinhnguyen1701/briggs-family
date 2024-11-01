@@ -41,6 +41,14 @@ function Footer() {
                     </div>
                 </li>
                 <li className="list-item">
+                    <h4 className="footer-title">Quick Links</h4>
+                    <div className="footer-info">
+                        <a href="/career" className="link contact-link">Career</a>
+                        <a href="/private-policy" className="link contact-link">Private Policy</a>
+                        <a href="/faq" className="link contact-link">FAQ</a>
+                    </div>
+                </li>
+                <li className="list-item">
                     <h4 className="footer-title">Contact</h4>
                     <div className="footer-info">
                         <a href="tel:+18663010155" className="link contact-link">
@@ -55,14 +63,6 @@ function Footer() {
                             <FontAwesomeIcon icon={faEnvelope} className="icon" />
                             <span>CustomerCare@briggsfamilyhd.com</span>
                         </a>
-                    </div>
-                </li>
-                <li className="list-item">
-                    <h4 className="footer-title">Quick Links</h4>
-                    <div className="footer-info">
-                        <Link to="/career" className="link">Career</Link>
-                        <a href="/private-policy" className="link">Private Policy</a>
-                        <Link to="/faq" className="link">FAQ</Link>
                     </div>
                 </li>
             </ul>

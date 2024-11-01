@@ -7,6 +7,7 @@ import './index.css';
 import HomePage from './pages/HomePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import PolicyPage from './pages/PolicyPage.jsx';
+import FAQPage from './pages/FAQPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/private-policy',
         element: <PolicyPage />,
+      },
+      {
+        path: '/faq',
+        element: <FAQPage />,
       },
     ],
   },

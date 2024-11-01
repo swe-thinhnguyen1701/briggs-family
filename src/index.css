@@ -377,35 +377,35 @@ footer .list .list-item {
   }
 }
 
-/* policy page */
-.policy-page {
+/* policy page, faq page */
+.policy-page, .faq-page {
   margin-bottom: 50px;
   padding: 10px;
 }
 
-.policy-page h1 {
+.policy-page h1, .faq-page h1 {
   margin-top: 10px;
   margin-bottom: 30px;
 }
 
-.policy-page h4 {
+.policy-page h4, .faq-page h4 {
   font-size: 1.8rem;
 }
 
-.policy-page section{
+.policy-page section, .faq-page section{
   margin-bottom: 20px;
 }
 
-.policy-page section p {
+.policy-page section p, .faq-page section p{
   margin-bottom: 10px;
 }
 
-.policy-page section p:last-child{
+.policy-page section p:last-child, .faq-page section p:last-child{
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px){
-  .policy-page{
+  .policy-page, .faq-page{
     padding: 20px;
   }
 }
