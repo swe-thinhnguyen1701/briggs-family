@@ -43,9 +43,9 @@ function Footer() {
                 <li className="list-item">
                     <h4 className="footer-title">Quick Links</h4>
                     <div className="footer-info">
-                        <a href="/career" className="link contact-link">Career</a>
-                        <a href="/private-policy" className="link contact-link">Private Policy</a>
-                        <a href="/faq" className="link contact-link">FAQ</a>
+                        <Link to="/career" className="link contact-link">Career</Link>
+                        <Link to="/private-policy" className="link contact-link">Private Policy</Link>
+                        <Link to="/faq" className="link contact-link">FAQ</Link>
                     </div>
                 </li>
                 <li className="list-item">

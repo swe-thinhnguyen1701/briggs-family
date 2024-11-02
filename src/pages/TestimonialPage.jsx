@@ -1,4 +1,4 @@
-import Rating from "../components/Rating";
+import Review from "../components/Review";
 
 function TestimonialPage() {
     const REVIEW_ARRAY = [
@@ -34,7 +34,7 @@ function TestimonialPage() {
         },
         {
             rating: 5,
-            message: "Our neighbor had a new roof put on their house this summer with your company because of hail damage. We were very impressed with your work, clean up and how nice their new roof complimented their house. Without doing any research we also hired your company to see if we too had hail damage.\nWe own a small ranch style home. it had a black roof, gray/blue siding and a bottom brown/beige brick. very cut up! After finding we had hail damage you did an awesome job in only day. You gave us a booklet of shingle styles but we couldn't narrow it down. After seeing larger samples outside in front of our home, we decided quickly!\nThanks for working with us, Briggs Family Home Development!! Wer'e so happy with your work, attention to detail, and how nice our home looks now!\nWe definitely recommend your company!!!",
+            message: "Our neighbor had a new roof put on their house this summer with your company because of hail damage. We were very impressed with your work, clean up and how nice their new roof complimented their house. Without doing any research we also hired your company to see if we too had hail damage.\n\nWe own a small ranch style home. it had a black roof, gray/blue siding and a bottom brown/beige brick. very cut up! After finding we had hail damage you did an awesome job in only day. You gave us a booklet of shingle styles but we couldn't narrow it down. After seeing larger samples outside in front of our home, we decided quickly!\n\nThanks for working with us, Briggs Family Home Development!! Wer'e so happy with your work, attention to detail, and how nice our home looks now!\n\nWe definitely recommend your company!!!",
             name: "Patricia C.",
             date: "10/11/2024"
         },
@@ -46,10 +46,10 @@ function TestimonialPage() {
         }
     ]
     return (
-        <article>
+        <article className="testimonial-page">
             <h1>What Our Client Says</h1>
             {
-                REVIEW_ARRAY.map((review, index) => <Rating review={review} key={index} />)
+                REVIEW_ARRAY.map((review, index) => <Review review={review} key={index} />)
             }
         </article>
     );
