@@ -9,6 +9,7 @@ import ErrorPage from './pages/ErrorPage.jsx';
 import PolicyPage from './pages/PolicyPage.jsx';
 import FAQPage from './pages/FAQPage.jsx';
 import TestimonialPage from './pages/TestimonialPage.jsx';
+import GalleryPage from './pages/GalleryPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/testimonials',
         element: <TestimonialPage />,
+      },
+      {
+        path: '/gallery',
+        element: <GalleryPage />,
       },
     ],
   },

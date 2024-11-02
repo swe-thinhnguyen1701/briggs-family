@@ -43,6 +43,12 @@ function TestimonialPage() {
             message: "We had our roof repaired by Alex Briggs and crew, which was nothing short of perfect. Our roof turned out better than expected. They were patient with insurance and the whole process in general. I would highly recommend Briggs Family Home Development for the high expectations we all want.",
             name: "Curt D.",
             date: "10/10/2024"
+        },
+        {
+            rating: 5,
+            message: "Briggs Family Home Development helped us out when we needed a new roof due to hail damage. Our insurance company was only offering to cover partial replacement, but Alex was our advocate and as a result of his patience and professionalism full replacement value was finally provided. We knew we were in good hands as Alex addressed all our concerns and readily completed the project. Briggs Home Development is a top notch contractor!",
+            name: "Bridget F.",
+            date: "10/10/2024"
         }
     ]
     return (

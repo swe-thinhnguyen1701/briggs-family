@@ -42,7 +42,7 @@ function NavBar() {
                             <Link to="/" className={currentPage === "/" ? "link highlight" : "link"}>Home</Link>
                         </li>
                         <li className="menu-item">
-                            <Link to="/" className="link">Home</Link>
+                            <Link to="/gallery" className={currentPage === "/gallery" ? "link highlight" : "link"}>Gallery</Link>
                         </li>
                         <li className="menu-item">
                             <Link to="/testimonials"  className={currentPage === "/testimonials" ? "link highlight" : "link"}>Testimonials</Link>
