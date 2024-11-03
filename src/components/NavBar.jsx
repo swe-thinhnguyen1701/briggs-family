@@ -70,10 +70,10 @@ function NavBar() {
                                         <Link to="/service/roof" className={currentPage === "/service/roof" ? "sub-menu-link highlight" : "sub-menu-link"} >Roofing</Link>
                                     </li>
                                     <li className="sub-menu-item">
-                                        <Link to="/service/roof" className="sub-menu-link">Siding</Link>
+                                        <Link to="/service/siding" className="sub-menu-link">Siding</Link>
                                     </li>
                                     <li className="sub-menu-item">
-                                        <Link to="/service/roof" className="sub-menu-link">Remodeling</Link>
+                                        <Link to="/service/remodel" className="sub-menu-link">Remodeling</Link>
                                     </li>
                                 </div>
                             </ul>
