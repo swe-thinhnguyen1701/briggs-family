@@ -89,9 +89,12 @@ p {
 }
 
 /* link */
-.link {
+.link,
+.sub-menu-link {
   text-decoration: none;
 }
+
+
 
 /* menu toggle */
 .menu-toggle {
@@ -199,28 +202,35 @@ p {
   opacity: 1;
 }
 
-.nav-right .menu .menu-item {
+.nav-right .menu .menu-item,
+.nav-right .sub-menu .sub-menu-item,
+.nav-right .dropdown-menu .dropdown-menu-heading {
   margin-bottom: 20px;
   font-size: 1.7rem;
+  font-weight: 600;
 }
 
-.nav-right .menu .menu-item .link {
+.nav-right .menu .menu-item .link,
+.nav-right .sub-menu .sub-menu-item .sub-menu-link {
   display: block;
   padding: 10px;
   color: black;
-  font-weight: 600;
   transition-property: background-color;
 }
 
-.nav-right .menu .menu-item .link:visited {
+.nav-right .menu .menu-item .link:visited,
+.nav-right .sub-menu .sub-menu-item:hover .sub-menu-link:visited {
   color: black;
 }
 
-.nav-right .menu .menu-item:hover .link {
+.nav-right .menu .menu-item:hover .link,
+.nav-right .dropdown-menu .dropdown-menu-heading:hover,
+.nav-right .sub-menu .sub-menu-item:hover .sub-menu-link {
   background-color: var(--hover-clr);
 }
 
-.nav-right .menu .menu-item .link.highlight {
+.nav-right .menu .menu-item .link.highlight,
+.nav-right .sub-menu .sub-menu-link.highlight {
   background-color: var(--hover-clr);
 }
 
@@ -236,6 +246,47 @@ p {
 .nav-right .menu.open nav {
   background-color: var(--white-clr);
 }
+
+.nav-right .dropdown-menu .dropdown-menu-heading {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.nav-right .dropdown-menu .sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition-property: grid-template-rows;
+  >div {
+    overflow: hidden;
+    margin-top: 5px;
+  }
+}
+
+.nav-right .dropdown-menu.show{
+  margin-bottom: 10px;
+}
+
+.nav-right .dropdown-menu.show .sub-menu{
+  grid-template-rows: 1fr;
+}
+
+.nav-right .dropdown-menu.show .icon{
+  transform: rotate(180deg);
+}
+
+.nav-right .sub-menu .sub-menu-item {
+  margin-left: 20px;
+}
+
+.nav-right .sub-menu .sub-menu-item:last-child{
+  margin-bottom: 0;
+}
+
 
 @media screen and (min-width: 768px) {
   .nav {
@@ -438,7 +489,7 @@ footer .list .list-item {
   margin-bottom: 25px;
 }
 
-.contact-page .location{
+.contact-page .location {
   margin-bottom: 15px;
   padding: 10px;
 }
@@ -448,30 +499,31 @@ footer .list .list-item {
 }
 
 @media screen and (min-width: 768px) {
+
   .policy-page,
   .faq-page,
   .testimonial-page,
   .gallery-page,
-  .contact-page{
+  .contact-page {
     padding: 20px;
   }
 
-  .gallery{
+  .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .gallery-page .img-container{
+  .gallery-page .img-container {
     width: 45%;
   }
 
-  .contact-page section:last-child{
+  .contact-page section:last-child {
     display: flex;
     justify-content: space-between;
   }
 
-  .contact-page .location h3{
+  .contact-page .location h3 {
     font-size: 2rem;
   }
 }
@@ -506,11 +558,12 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: linear-gradient(0, rgba(229,229,229,1) 0%, var(--footer-bg-clr) 100%);
+  background: linear-gradient(0, rgba(229, 229, 229, 1) 0%, var(--footer-bg-clr) 100%);
   padding: 20px 0;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   padding: 10px;
   border-color: transparent;
   border-radius: 10px;
@@ -518,11 +571,12 @@ form input, form textarea {
   transition-property: border-color;
 }
 
-form textarea{
+form textarea {
   resize: none;
 }
 
-form input:focus, form textarea:focus{
+form input:focus,
+form textarea:focus {
   border-color: var(--black-clr);
 }
 
@@ -533,12 +587,12 @@ form .submit-btn {
   cursor: pointer;
 }
 
-form .submit-btn:hover{
+form .submit-btn:hover {
   background-color: #585858;
 }
 
-@media screen and (min-width: 768px){
-  form{
+@media screen and (min-width: 768px) {
+  form {
     width: 50%;
     padding: 20px;
     border-radius: 10px;
@@ -707,8 +761,11 @@ footer .list .list-item:nth-child(3) .footer-info .link,
 .hero .container .contact-link span,
 .review,
 .gallery-page .img-container img,
-form input, form textarea,
-form .submit-btn {
+form input,
+form textarea,
+form .submit-btn,
+.nav-right .dropdown-menu .sub-menu,
+.nav-right .dropdown-menu .icon {
   transition-duration: var(--timing-duration);
   transition-timing-function: var(--timing-function);
 }

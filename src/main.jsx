@@ -11,6 +11,7 @@ import FAQPage from './pages/FAQPage.jsx';
 import TestimonialPage from './pages/TestimonialPage.jsx';
 import GalleryPage from './pages/GalleryPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
+import ServiceRoofingPage from './pages/ServiceRoofingPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <ContactPage />,
       },
+      {
+        path: '/service/roof',
+        element: <ServiceRoofingPage />,
+      }
     ],
   },
 ]);
