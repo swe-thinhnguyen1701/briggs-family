@@ -48,7 +48,7 @@ function NavBar() {
                             <Link to="/testimonials"  className={currentPage === "/testimonials" ? "link highlight" : "link"}>Testimonials</Link>
                         </li>
                         <li className="menu-item">
-                            <Link to="/" className="link">Home</Link>
+                            <Link to="/contact" className={currentPage === "/contact" ? "link highlight" : "link"}>Contact Us</Link>
                         </li>
                     </ul>
                 </div>

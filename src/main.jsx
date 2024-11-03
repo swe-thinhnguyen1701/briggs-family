@@ -10,6 +10,7 @@ import PolicyPage from './pages/PolicyPage.jsx';
 import FAQPage from './pages/FAQPage.jsx';
 import TestimonialPage from './pages/TestimonialPage.jsx';
 import GalleryPage from './pages/GalleryPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/gallery',
         element: <GalleryPage />,
+      },
+      {
+        path: '/contact',
+        element: <ContactPage />,
       },
     ],
   },
